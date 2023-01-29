@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - ${POSTGRES_PORT:?err}:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:?err}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?err}
+    volumes:
+      - "./volumes/postgres:/var/lib/postgresql"
+
+  client:
+    build:
+      dockerfile: packages/frontend/Dockerfile
+      context: .
+    depends_on:
+      - backend
+    environment:
+      - PORT=${PORT:?err}
+    ports:
+      - "${FRONTEND_PORT:?err}:${PORT:?err}"
+
+  backend:
+    build:
+      dockerfile: packages/backend/Dockerfile
+      context: .
+    depends_on:
+      - postgres
+    links:
+      - "postgres:db"
+    environment:
+      - PORT=${PORT:?err}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID:?err}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET:?err}
+      - GOOGLE_CALLBACK_URI=${GOOGLE_CALLBACK_URI:?err}
+      - SESSION_TOKEN_SECRET_KEY=${ACCESS_TOKEN_SECRET_KEY:?err}
+      - CLIENT_URL=${CLIENT_URL:?err}
+      - POSTGRES_USER=${POSTGRES_USER:?err}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?err}
+      - POSTGRES_PORT=${POSTGRES_PORT:?err}
+      - POSTGRES_HOST=${POSTGRES_HOST:?err}
+    ports:
+      - "${BACKEND_PORT:?err}:${PORT:?err}"

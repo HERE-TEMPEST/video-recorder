@@ -1,0 +1,66 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"plugins": ["import", "@typescript-eslint/eslint-plugin"],
+	"extends": ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+	"root": true,
+	"env": {
+		"node": true,
+		"jest": true
+	},
+	"ignorePatterns": [".eslintrc.js", "Dockerfile", "**/*.json", "*.md"],
+	"rules": {
+		"@typescript-eslint/no-unused-vars": ["error"],
+		"@typescript-eslint/explicit-member-accessibility": [
+			"warn",
+			{
+				"overrides": {
+					"constructors": "no-public",
+					"methods": "explicit",
+					"properties": "off",
+					"parameterProperties": "explicit"
+				}
+			}
+		],
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/interface-name-prefix": "off",
+		"@typescript-eslint/no-empty-interface": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"arrow-parens": ["error", "always"],
+		"import/prefer-default-export": "off",
+		"max-classes-per-file": ["error", 1],
+		"max-len": ["error", 130],
+		"no-console": "warn",
+		"no-var": "error",
+		"no-duplicate-imports": "warn",
+		"no-empty-pattern": "warn",
+		"no-return-await": "error",
+		"no-trailing-spaces": "error",
+		"object-shorthand": "error",
+		"lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+		"padding-line-between-statements": [
+			"error",
+			{ "blankLine": "always", "next": "*", "prev": ["const", "let"] },
+			{ "blankLine": "always", "next": "class", "prev": "*" },
+			{ "blankLine": "always", "next": "export", "prev": "*" },
+			{ "blankLine": "any", "next": "export", "prev": "export" },
+			{ "blankLine": "always", "next": "for", "prev": "*" },
+			{ "blankLine": "always", "next": "function", "prev": "*" },
+			{ "blankLine": "always", "next": "if", "prev": "*" },
+			{ "blankLine": "always", "next": "*", "prev": "if" },
+			{ "blankLine": "always", "next": "return", "prev": "*" },
+			{ "blankLine": "always", "next": "switch", "prev": "*" },
+			{ "blankLine": "always", "next": "try", "prev": "*" },
+			{ "blankLine": "always", "next": "while", "prev": "*" },
+			{ "blankLine": "any", "next": ["const", "let"], "prev": ["const", "let"] }
+		]
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		}
+	}
+}

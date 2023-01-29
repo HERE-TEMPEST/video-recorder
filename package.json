@@ -1,0 +1,34 @@
+{
+  "name": "@cv-builder/root",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/@nestjs/common",
+      "**/@nestjs/common/**",
+      "**/.prisma/**",
+      "**/.prisma",
+      "**/@prisma/**",
+      "**/@prisma",
+      "**/prisma/**",
+      "**/prisma",
+      "**/express-session/**",
+      "**/passport-google-oauth20/**"
+    ]
+  },
+  "scripts": {
+    "test": "yarn lerna exec yarn run test --parallel",
+    "build": "yarn lerna exec yarn run build --parallel",
+    "start": "yarn lerna exec yarn run start --parallel",
+    "pre-commit": "yarn lerna exec yarn run pre-commit --parallel",
+    "lint": "yarn lerna exec yarn run pre-commit --parallel",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lerna": "^6.4.1"
+  },
+  "version": "1.4.2"
+}

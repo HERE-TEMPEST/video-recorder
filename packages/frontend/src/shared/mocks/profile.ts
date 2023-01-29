@@ -1,0 +1,56 @@
+export const profile = {
+	email: 'some@gmail.com',
+	specialty: 'Back-end Developer',
+	education: 'Software Engineer',
+	expInYears: 5,
+	languages: [
+		{ language: 'ENGLISH', rank: 'A2' },
+		{ language: 'GERMAN', rank: 'А1' }
+	],
+	name: 'Andrew',
+	surname: 'Voropaev',
+	profileUri: '/images/profile.png',
+	biography:
+		'Main directions of development are RESTful APIs development, backend development. Knowledge of REST architecture principles. Practical experience and knowledge with JavaScript, TypeScript and .NET. Understanding of algorithms, data structures and databases. Good understanding of the software development cycle. Ready to acquire new skills rapidly. Excellent communication skills, good team player.',
+	technologies: [
+		{ name: 'TypeScript', type: 'PL' },
+		{ name: 'JavaScript', type: 'PL' },
+		{ name: 'C#', type: 'PL' },
+		{ name: 'NodeJS', type: 'PT' },
+		{ name: 'Express', type: 'PT' },
+		{ name: '.NET', type: 'PT' },
+		{ name: 'Unity', type: 'PT' },
+		{ name: 'HTML', type: 'PT' },
+		{ name: 'CSS', type: 'PT' },
+		{ name: 'React', type: 'PT' },
+		{ name: 'Redux', type: 'PT' },
+		{ name: 'Redux-Saga', type: 'PT' },
+		{ name: 'Redux Thunk', type: 'PT' },
+		{ name: 'Redux-Toolkit', type: 'PT' },
+		{ name: 'Passport', type: 'PT' },
+		{ name: 'Nest.JS', type: 'PT' },
+		{ name: 'RabbitMQ', type: 'PT' },
+		{ name: 'Kafka', type: 'PT' },
+		{ name: 'Socket.io', type: 'PT' },
+
+		{ name: 'MongoDB', type: 'DB' },
+		{ name: 'DynamoDB', type: 'DB' },
+		{ name: 'PostgreSQL', type: 'DB' },
+		{ name: 'MySQL', type: 'DB' },
+
+		{ name: 'Azure Functions', type: 'CLOUD' },
+		{ name: 'Azure DevOps', type: 'CLOUD' },
+		{ name: 'Azure Bucket', type: 'CLOUD' },
+		{ name: 'AWS EC2', type: 'CLOUD' },
+		{ name: 'AWS S3', type: 'CLOUD' },
+		{ name: 'AWS Lambda', type: 'CLOUD' },
+		{ name: 'AWS SQS', type: 'CLOUD' },
+		{ name: 'AWS SNS', type: 'CLOUD' },
+		{ name: 'AWS API Gateway', type: 'CLOUD' },
+		{ name: 'Visual Studio Code', type: 'IDS' },
+		{ name: 'bash', type: 'SHELL' },
+		{ name: 'Git', type: 'SCS' },
+		{ name: 'docker', type: 'MC' }
+	],
+	domains: ['Finance', 'NFT', 'Analytics', 'CRM', 'Games']
+}
