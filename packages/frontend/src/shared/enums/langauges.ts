@@ -9,5 +9,5 @@ export enum LANGRANK {
 
 export enum Language {
 	ENGLISH = 'ENGLISH',
-	GERMAN = 'GERMAN'
+	GERMAN = 'GERMANY'
 }

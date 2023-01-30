@@ -21,6 +21,7 @@ export const initSocket = (uri: string) => {
 		if (connection && connection.connected) {
 			connection.disconnect()
 		}
+		connection.close()
 	}
 
 	return { connection, disconnect }

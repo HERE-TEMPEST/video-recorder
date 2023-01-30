@@ -1,0 +1,56 @@
+@import '../../../app/styles/index.scss';
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.videoWrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: vw(20);
+		height: vh(1100);
+		width: vw(1600);
+		background: transparentize(#3c4043, 0);
+		border-radius: vw(10);
+
+		video {
+			background-color: transparentize(#3c4043, 0);
+
+			width: vw(1300);
+			min-height: 100%;
+		}
+	}
+
+	.navigations {
+		display: flex;
+		align-items: center;
+		align-self: flex-start;
+		margin-left: vw(130);
+		height: vw(55);
+
+		.timeRecord {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			font-weight: 400;
+			font-size: vw(20);
+			line-height: vw(24);
+
+			color: #ffffff;
+		}
+
+		.playStop {
+			margin-top: vw(10);
+			width: vw(50);
+			height: vw(50);
+			margin-left: vw(750);
+
+			svg {
+				width: vw(50);
+				height: vw(50);
+			}
+		}
+	}
+}

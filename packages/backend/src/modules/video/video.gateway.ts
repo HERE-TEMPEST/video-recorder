@@ -26,9 +26,10 @@ export class VideoGateway implements OnGatewayInit, OnGatewayConnection, OnGatew
 		this.logger = new Logger('Video')
 	}
 
-	@SubscribeMessage('message')
+	@SubscribeMessage('fragment')
 	public onMessage(@UserSession() session: any, @MessageBody() body: any) {
-		this.logger.log({ session, body, where: 'Video', id: session.id })
+		// this.logger.log({ session, body, where: 'Video', id: session.id })
+		console.log(body)
 	}
 
 	public afterInit() {

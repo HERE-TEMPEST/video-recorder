@@ -1,0 +1,27 @@
+@import '../../app/styles/index.scss';
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100vh;
+	background: transparentize(#202124, 0);
+
+	.formLogin {
+		display: flex;
+		align-items: center;
+
+		button {
+			width: vw(300);
+			height: vw(75);
+
+			background: transparent;
+			border: none;
+			img {
+				width: vw(300);
+				height: vw(75);
+			}
+		}
+	}
+}
